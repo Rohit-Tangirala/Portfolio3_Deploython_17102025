@@ -3,87 +3,126 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rohit | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>T.G.S.S.Rohit Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <h1>Rohit - Web Developer</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Projects & Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="900">
+                <span>T.G.S.S. Rohit</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="800"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400"><a href="#services">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500"><a href="#blogs">Blogs</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="1500">
+                <img src="rohit.jpg" alt="Rohit Tangirala">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="700" data-aos-delay="800">Hey, I'm <span>Rohit Tangirala</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="800" data-aos-delay="900">
+                    I'm a <span style="color:#00bcd4;">Web Developer</span>, Tech Learner & Future Problem-Solver
+                </div>
+                <p data-aos="flip-up" data-aos-duration="1200" data-aos-delay="1000">
+                    My name is Rohit Tangirala and I am currently pursuing a B.Tech in Computer Science and Engineering at KLH University.<br>
+                    I maintain a CGPA of 9.35 and thrive on technical challenges in web development, programming, and emerging fields like AI and Data Analytics.<br>
+                    I pride myself on hands-on technical projects, strong collaborations, and academic excellence.<br>
+                </p>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="900" data-aos-delay="1200">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-out-left" data-aos-duration="700" data-aos-delay="1300">
+                    <button>Download CV</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-    <img src="images/rohit.png" alt="My photo">
-
+    <section class="info" id="about">
+        <h2 id="about">About Me</h2>
         <p>
-            Hello! I'm Rohit, an 18-year-old passionate Computer Science Engineering student
-            currently in my 2nd year at college. I have a keen interest in full-stack web 
-            development, system design, and modern UI/UX principles. My goal is to create 
-            impactful, scalable, and efficient applications that solve real-world problems.
-        </p>
-        <p>
-            I enjoy learning modern technologies and constantly improving my coding standards.
-            My focus areas include JavaScript-based front-end frameworks, back-end APIs,
-            and responsive web design. I am an effective collaborator, debugging enthusiast,
-            and someone who thrives in fast-paced development environments.
+            I am an 18-year-old 2nd-year Computer Science student (CSE), deeply passionate about full-stack development, real-world IoT/Arduino integration, and data-driven applications.<br>
+            My career goal is to solve complex problems, deliver scalable web solutions, and advance in fields like AI and analytics.
         </p>
     </section>
 
-    <!-- Skills and Projects Section -->
-    <section id="skills">
-        <h2>Projects & Technical Skills</h2>
-        <div class="project">
-            <h3>Personal Portfolio Website</h3>
-            <p>
-                A responsive and dynamic portfolio site built with HTML, CSS, and JavaScript,
-                showcasing personal projects and technical achievements. Deployed on GitHub Pages,
-                Netlify, and Vercel.
-            </p>
-        </div>
-
-        <div class="project">
-            <h3>Student Management System</h3>
-            <p>
-                Developed a CRUD-based app for managing student data using React.js and Firebase.
-                Implemented authentication, data persistence, and responsive dashboard UI.
-            </p>
-        </div>
-
-        <h3>Technical Skills</h3>
-        <ul class="skills-list">
-            <li>Languages: HTML, CSS, JavaScript, Python, SQL</li>
-            <li>Frameworks: React.js, Bootstrap, Node.js (basic)</li>
-            <li>Tools: Git, GitHub, VS Code, Chrome DevTools</li>
-            <li>Other: Responsive Design, RESTful APIs, Deployment on Netlify/Vercel</li>
+    <section class="info" id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Languages: C, C++, JavaScript, Python, HTML, CSS</li>
+            <li>Frontend: React.js, Bootstrap, Responsive Web UI</li>
+            <li>Backend: Node.js (basics), RESTful APIs</li>
+            <li>Data & Analytics: SQL, Data Visualization Basics</li>
+            <li>IoT/Hardware: Arduino, Sensors & Real-world Projects</li>
+            <li>Dev Tools: Git, GitHub, VS Code, Chrome DevTools</li>
+            <li>Soft Skills: Collaboration, Debugging, Academic Research</li>
         </ul>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Information</h2>
+    <section class="info" id="projects">
+        <h2>Projects</h2>
+        <h3>Personal Portfolio Website</h3>
         <p>
-            Feel free to connect with me for collaborations, freelance projects,
-            or web development discussions.
+            A clean, animated portfolio deployed on GitHub Pages, Netlify, and Vercel, built with HTML, CSS, JS, FontAwesome, and AOS.<br>
+            Showcases advanced responsive design and strong technical content.
         </p>
+        <h3>Student Management System</h3>
+        <p>
+            Developed a CRUD student management app in React.js with Firebase backend, authentication, and dynamic dashboard UI.
+        </p>
+        <h3>IoT Sensor Dashboard</h3>
+        <p>
+            Built and coded a real-time dashboard in HTML/CSS/JS using Arduino and multiple sensors. Visualized live data streams and alerting.
+        </p>
+    </section>
+    <section class="info" id="contact">
+        <h2>Contact Information</h2>
         <p>Email: <a href="mailto:tgssrohit2306@gmail.com">tgssrohit2306@gmail.com</a></p>
         <p>Phone: 7816024572</p>
         <p>Location: India</p>
+        <p>Connect for collaborations, freelance work, or technical problem solving!</p>
     </section>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2025 Rohit | Second Year CSE. Built with HTML, CSS & JavaScript.</p>
+        © 2025 T.G.S.S. Rohit | 2nd Year CSE | Portfolio crafted with HTML, CSS, JavaScript, Font Awesome & AOS
     </footer>
-
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+        function hamburg() {
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel() {
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
 </body>
 </html>

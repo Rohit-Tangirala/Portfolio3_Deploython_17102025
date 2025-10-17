@@ -4,73 +4,173 @@
     box-sizing: border-box;
     font-family: "Poppins", Arial, sans-serif;
 }
-
 body {
-    background-color: #f9fafc;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f4f8fb;
+    color: #222;
 }
-
-header {
-    background: #1a1a1a;
-    padding: 15px 0;
-    text-align: center;
+nav {
+    background: #1b2836;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.07);
 }
-
-header h1 {
-    color: #00bcd4;
-    margin-bottom: 10px;
-}
-
-nav ul {
+.nav-container {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 5vw;
 }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #00bcd4;
-}
-
-section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-h2 {
+.logo span {
     font-size: 1.8rem;
     color: #00bcd4;
-    margin-bottom: 15px;
-    text-align: center;
+    font-weight: bold;
+    letter-spacing:1px;
 }
-
-.project {
+.links {
+    display: flex;
+    gap: 23px;
+}
+.link a, .contact-btn a {
+    text-decoration: none;
+    color: #e3eaf0;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-size: 1.03rem;
+}
+.link a:hover, .contact-btn a:hover {
+    color: #00bcd4;
+}
+.fa-bars, .fa-xmark {
+    color: #e3eaf0;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 900px) {
+    .links {
+        display: none;
+    }
+    .fa-bars {
+        display: block;
+    }
+}
+.dropdown {
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%;
+    background: #16202a;
+    z-index: 99;
+    padding: 40px 0;
+    transform: translateY(-500px);
+    transition: transform 0.4s;
+}
+.dropdown .links {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.dropdown .fa-xmark {
+    margin-top: 35px;
+    font-size: 2rem;
+    color: #00bcd4;
+}
+.main-container {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    align-items: center;
+}
+.image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
     background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.skills-list {
-    list-style: disc;
-    padding-left: 25px;
-    line-height: 1.8;
+.content {
+    flex: 1.1;
 }
-
+.content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1b2836;
+    margin-bottom: 20px;
+}
+.content h1 span {
+    color: #00bcd4;
+}
+.typewriter {
+    font-size: 1.25rem;
+    font-family: inherit;
+    color: #16202a;
+    padding-bottom: 18px;
+}
+.content p {
+    font-size: 1.08rem;
+    margin-bottom: 30px;
+    color: #34465d;
+}
+.social-links a {
+    margin-right: 16px;
+    color: #00bcd4;
+    font-size: 1.7rem;
+    transition: color 0.2s;
+}
+.social-links a:hover {
+    color: #1b2836;
+}
+.btn button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+section.info {
+    margin: 80px auto 0 auto;
+    width: 90vw;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(81, 166, 251, 0.08);
+    padding: 40px 38px;
+}
+section.info h2 {
+    color: #00bcd4;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-align: left;
+}
+section.info h3 {
+    color: #2c436c;
+    font-size: 1.18rem;
+    margin-bottom: 8px;
+    margin-top:24px;
+}
+section.info p, section.info ul {
+    color: #34465d;
+    font-size: 1.07rem;
+    margin-bottom: 14px;
+}
+section.info ul {
+    padding-left: 26px;
+    margin-bottom: 10px;
+}
+section#contact {
+    margin-top:32px;
+}
 footer {
-    background: #1a1a1a;
-    color: white;
+    background: #1b2836;
+    color: #e3eaf0;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
+    padding: 22px 0;
+    margin-top: 70px;
+    letter-spacing:1px;
+    font-size:1.1rem;
 }
